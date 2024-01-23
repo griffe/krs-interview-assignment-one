@@ -1,0 +1,23 @@
+assignment:
+  products:
+    4b5760ba-6bd6-479d-8264-69a90a2b1a21: 555.5
+  security:
+    apiKeys:
+      - testToken
+  discounts:
+    amount:
+      thresholds:
+        100: 9
+        1000: 8
+        0: 7
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,mappings,info,metrics
+    health:
+      group:
+        custom:
+          show-components: always
+          show-details: always

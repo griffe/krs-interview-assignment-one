@@ -1,0 +1,31 @@
+assignment:
+  products:
+    1ace7cb8-60be-4442-b88b-7bd7514c5ecd: 123.9
+    d89ee8d5-14f5-4f52-9b87-29d9189568df: 456.5
+    6ebddddd-3321-4157-ac8a-881bc8bd1305: 789.1
+  security:
+    apiKeys:
+      - secretToken
+      - randomToken
+      - ultraSecure
+  discounts:
+    amount:
+      thresholds:
+        100: 5
+        1000: 10
+        0: 0
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,mappings,info,metrics
+    health:
+      group:
+        custom:
+          show-components: always
+          show-details: always
+
+spring:
+  profiles:
+    active: prod
